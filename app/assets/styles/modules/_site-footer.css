@@ -1,0 +1,59 @@
+.site-footer{
+
+   &__links {
+      width: 100%;
+      min-height: 110px;
+      background-color: #393939;
+      padding-top: 19px;
+      padding-bottom: 23px;
+      display: table;
+
+      & > div > div {
+        float: left;
+        font-size:0.75rem;
+        color: $lineGray;
+
+        & > h4 {
+            margin-bottom: 10px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #fff;
+         }
+
+         & > p{
+            line-height: 1.75;
+         }
+
+         & > ul > li {             
+            float: left;
+            margin-right: 9px;
+            line-height: 1.77;
+
+            &::before {
+               content: "• ";
+            }
+         }
+      }
+
+      &__introduction {
+         width: 450px;
+         margin-right: 100px;
+      }
+
+      &__related {
+         width: 450px;
+      }
+   }
+
+   &__footer-address {
+      padding: 13px 0;
+      background-color: #000000;
+
+      address {
+         color:#ccc;
+         font-size: 10px;
+         text-align: center;
+         font-style: normal;
+      }
+   }
+}

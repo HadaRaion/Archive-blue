@@ -1,0 +1,94 @@
+.series{
+   width: 1000px;
+   margin: 0 auto;
+
+   .align-top{
+      padding: 0;
+      margin-bottom: 51px;
+
+      input {
+         line-height: inherit;
+      }
+
+      input::placeholder {
+         color: #a7a7a7;
+         /*
+         font-size: 11px;
+         line-height: 23px;
+         */
+      }
+      
+      .search-box {
+         /*      
+         transform: translateX(0px);          
+         */
+      }
+   }
+
+   .series-posts {
+      margin-right: -15px;
+
+      &__post {
+         width: 325px;
+         float: left;
+         margin-right: 13px;
+         margin-bottom: 42px;
+
+         &__thumpnail {
+            height: 230px;
+            border: 1px solid #e3e3e3;
+            background-size: cover !important;
+            background-position: center center !important;
+
+            &.no-thumbnail {
+               background-image: url(../images/no-img-big.jpg);
+               background-repeat: no-repeat !important;
+            }           
+         }
+
+         &__textbox {
+            height: 167px;
+            padding: 15px 13px 0;
+            border: 1px solid #e3e3e3;
+            border-top: none;
+            border-bottom: 8px solid #e3e3e3;
+
+            h3 {
+               font-size: 15px;
+               font-weight: bold;
+               line-height: 1.87;
+               letter-spacing: -0.005rem;
+               color: $fontBlue;
+            }
+            h2 {
+               word-wrap:break-word; 
+               line-height: 1.67;
+               font-size: 17px;
+               letter-spacing: -0.005rem;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               white-space: nowrap;
+               word-wrap: normal;
+               padding-bottom: 5px;
+            }
+
+            .line {
+               margin: 7px 0 11px
+            }
+
+            .text {
+               margin-top: 8px;
+               word-wrap:break-word; 
+            }
+         }
+
+      }
+      
+      .pagination{
+         text-align: center;
+      }
+   
+   }
+}
+
+

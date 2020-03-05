@@ -1,0 +1,211 @@
+.site-header {
+   position: fixed;
+   width: 100%;
+   height: 131px;
+   top: 0;
+   z-index: 99;
+
+   &__top-content {
+      width: 100%;
+      height: 78px;
+      color: #000000;
+      background: #fff;
+
+      &__logo {
+         width: 200px;
+         height: 55px;
+         float: left;
+         margin-top: 8px;
+         text-align: center;
+         background-size: contain;
+         background-repeat: no-repeat;
+         background-position: left center;
+         
+         & > a {
+            display: block;
+            width: 100%;
+            height: 42px;
+            font-size: 0;
+         }
+      }
+
+      &__menu {
+         float: right;
+         & > ul {
+            position: relative;
+            padding-top: 28px; 
+            font-size: 15px;
+
+               & > li {
+               float: left;
+               position: relative;
+               margin-right: 41px;
+
+               .dropBoardMenu::after{
+                  content: "";
+                  width: 0;
+                  height: 0;
+                  border-style: solid;
+                  border-width: 6px 6px 0 6px;
+                  border-color: #707070 transparent transparent transparent;
+                  position: relative;
+                  top: 15px;
+                  left: 5px;
+               }
+               .dropdown-content {
+                  position: absolute;
+                  display: none;
+                  z-index: 100;
+                  left: -12px;
+                  min-width: 90px;
+                  margin-top: 12px;
+                  padding: 12px;
+                  border: solid 1px #000000;
+                  background-color: #FFF;
+                  color: $textGray;
+                  font-size: 12px;
+
+                  & > li {
+                     margin-bottom:10px;
+                     width: 100%;;
+                     &:hover {
+                        color:$fontBlue;
+                     }
+                  }
+               }
+               
+               &.search {
+                  display: inline-block;
+                  width: 21px;
+                  height: 57px;
+                  color: transparent;
+                  transform:translateY(-21px);
+                  font-size: 0;
+                  background: url(../images/icons/icon-search.svg) no-repeat;
+                  margin-right: 30px;
+               }
+               
+               &.login {
+                  width: 56px;
+                 height: 20px;
+                 border-radius: 20px;
+                 border: solid 1px #000000;
+                 margin-right: 0;
+                 font-size: 10px;
+                 text-align: center;
+                 line-height: 17px;
+               }
+            }
+         }
+      }
+   }
+
+   &__nav-content {
+      width: 100%;
+      height: 74px;
+      
+      &__menu {
+         width: 100%;
+         height: 44px;
+         background-color: $menuBlue;
+         position: relative;
+         z-index: 20;
+      }
+
+      &__menu-list {
+         height: 74px;
+         float: left;
+         margin-right: 47px; 
+
+         &.active {
+            .arrow {
+               width: 0;
+               height: 0;
+               border-style: solid;
+               border-width: 0 6px 6px 6px;
+               border-color: transparent transparent  $subnMenuBackbround transparent;
+               position: absolute;
+               bottom: 0px;
+               transform: translateX(20px)
+            }
+            
+            & > ul {
+               display: block;
+            }
+         }
+
+         & > a {
+            line-height: 47px;
+            font-size: 15px;
+            font-weight: bold;
+            color: $navFont;
+         }
+
+         & > ul {
+            display: none;
+            height: 30px;
+            background-color: $subnMenuBackbround;
+            position: absolute;
+            left: 0;
+            top:44px;
+
+            & > li {
+               float: left;
+               font-size: 12px;
+               color: $subnMenuFont;
+               margin-right: 30px; 
+               line-height: 30px;
+            }
+         }
+      }
+
+      &__btn {
+         position: absolute;
+         z-index: 20;
+         top: 11px;
+         right: 100px;
+         
+
+         & > li {
+            float: left;
+            width: 80px;
+            height: 22px;
+            border-radius: 30px;
+            background-color: #FFF;
+            margin-left: 16px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: $fontBlue;
+            line-height: 22px;
+            
+         }
+      }
+   }
+
+   &__backgoround {
+      width: 100%;
+      position: absolute;
+      top: 78px;
+      z-index: 10;
+      &__first-depth {  
+         height: 44px;
+         background-color: $menuBlue;
+      }
+      &__second-depth {
+         height: 30px;
+         background-color: $subnMenuBackbround;
+         display: none;
+
+         &.active {
+            display: block;
+         }
+      }
+
+   }
+}
+
+
+.site-header__backgoround {
+   background-color: #000000;
+}

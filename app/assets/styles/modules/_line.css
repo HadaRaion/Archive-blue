@@ -1,0 +1,14 @@
+.line {
+
+   &--short {
+      width: 48px;
+      position: relative;
+      left: 0;
+      border-top: 4px solid $medium;
+   }
+
+   &--black {
+      border-top: 4px solid #000;
+      margin: 0;
+   }
+}
